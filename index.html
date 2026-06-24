@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usaid Ahmed — AI & Machine Learning Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0F172A',
+            secondary: '#111827',
+            accent1: '#6366F1',
+            accent2: '#22D3EE',
+            accent3: '#A78BFA',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body class="bg-primary text-gray-200 font-sans overflow-x-hidden">
+
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Gradient Glass Background Blobs -->
+  <div class="gradient-bg">
+    <div class="gradient-blob blob-1"></div>
+    <div class="gradient-blob blob-2"></div>
+    <div class="gradient-blob blob-3"></div>
+    <div class="gradient-blob blob-4"></div>
+    <div class="gradient-blob blob-5"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#hero" class="text-2xl font-bold gradient-text">UA</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden text-gray-200 focus:outline-none" aria-label="Toggle menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden glass-card mx-4 mb-2 rounded-xl overflow-hidden">
+      <div class="flex flex-col p-4 gap-3">
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#experience" class="mobile-nav-link">Experience</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#certifications" class="mobile-nav-link">Certifications</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="min-h-screen flex items-center relative">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center w-full pt-20">
+      <div class="fade-in-up">
+        <p class="text-accent2 font-mono text-sm mb-4 tracking-wider">Hello, I'm</p>
+        <h1 class="text-5xl md:text-7xl font-bold mb-4">
+          <span class="gradient-text">Usaid Ahmed</span>
+        </h1>
+        <h2 class="text-xl md:text-2xl text-gray-400 mb-2 h-8">
+          <span id="typewriter"></span><span class="typewriter-cursor">|</span>
+        </h2>
+        <div class="flex flex-wrap gap-4 text-sm text-gray-400 mt-4 mb-6">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4 text-accent2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            Multan, Pakistan
+          </span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4 text-accent2" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            usaidahmed1008@gmail.com
+          </span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4 text-accent2" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            +92 3160576402
+          </span>
+        </div>
+        <p class="text-lg text-gray-300 mb-8 max-w-lg leading-relaxed">
+          Transforming Data into <span class="text-accent2 font-semibold">Intelligent Solutions</span>
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="https://drive.google.com/file/d/1-tNqoH9FHkVz7bhIvKop2karyLx2eMtn/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary">Download CV</a>
+        </div>
+      </div>
+      <div class="fade-in-up delay-200 flex justify-center">
+        <div class="hero-image-wrapper">
+          <div class="hero-glow"></div>
+          <div class="hero-avatar" id="avatar-wrapper" style="cursor:pointer;" title="Click to add your photo">
+            <input type="file" id="avatar-input" accept="image/*" style="display:none" />
+            <div class="avatar-placeholder" id="avatar-placeholder">
+              <svg class="w-16 h-16 text-accent1 opacity-60" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              <p class="text-xs text-gray-400 mt-2">Click to add photo</p>
+            </div>
+            <img id="avatar-img" src="" alt="Usaid Ahmed" class="avatar-photo" style="display:none;" />
+          </div>
+          <div class="orbit-ring"></div>
+          <div class="orbit-dot orbit-dot-1"></div>
+          <div class="orbit-dot orbit-dot-2"></div>
+          <div class="orbit-dot orbit-dot-3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-indicator">
+      <a href="#about" class="flex flex-col items-center gap-2 text-gray-500 hover:text-accent2 transition-colors">
+        <span class="text-xs tracking-widest uppercase">Scroll</span>
+        <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="section-reveal">
+        <h2 class="section-title">About Me</h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center mt-12">
+          <div>
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">
+              I am a Computer Science graduate with a deep passion for <span class="text-accent2">Artificial Intelligence</span> and <span class="text-accent1">Machine Learning</span>.
+              I specialize in building intelligent systems using Python, Scikit-learn, TensorFlow, and modern data science tools.
+            </p>
+            <p class="text-gray-400 leading-relaxed">
+              My goal is to solve real-world problems using data-driven solutions and continuously evolve in AI research and development.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-6">
+            <a href="#experience" class="stat-card glass-card p-6 rounded-2xl text-center block">
+              <span class="stat-number text-4xl font-bold gradient-text" data-target="3">0</span><span class="text-4xl font-bold gradient-text">+</span>
+              <p class="text-gray-400 text-sm mt-2">Internships</p>
+            </a>
+            <a href="#projects" class="stat-card glass-card p-6 rounded-2xl text-center block">
+              <span class="stat-number text-4xl font-bold gradient-text" data-target="10">0</span><span class="text-4xl font-bold gradient-text">+</span>
+              <p class="text-gray-400 text-sm mt-2">ML Projects</p>
+            </a>
+            <a href="#certifications" class="stat-card glass-card p-6 rounded-2xl text-center block">
+              <span class="stat-number text-4xl font-bold gradient-text" data-target="5">0</span><span class="text-4xl font-bold gradient-text">+</span>
+              <p class="text-gray-400 text-sm mt-2">Certifications</p>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-24 bg-secondary/50 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="section-reveal">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline mt-12">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card p-6 rounded-2xl">
+              <div class="flex flex-wrap items-center gap-3 mb-3">
+                <span class="text-accent2 font-mono text-sm">Nov 2025 – Jan 2026</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-1">Data Science Intern</h3>
+              <p class="text-accent1 font-medium mb-4">Arch Technologies</p>
+              <ul class="space-y-2 text-gray-400 text-sm">
+                <li class="flex items-start gap-2"><span class="text-accent2 mt-1">&#9656;</span>Titanic Survival Classification</li>
+                <li class="flex items-start gap-2"><span class="text-accent2 mt-1">&#9656;</span>Stock Price Prediction (Time Series)</li>
+                <li class="flex items-start gap-2"><span class="text-accent2 mt-1">&#9656;</span>Customer Segmentation (K-Means)</li>
+                <li class="flex items-start gap-2"><span class="text-accent2 mt-1">&#9656;</span>Movie Rating Prediction System</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card p-6 rounded-2xl">
+              <div class="flex flex-wrap items-center gap-3 mb-3">
+                <span class="text-accent2 font-mono text-sm">Dec 2025 – Jan 2026</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-1">AI & ML Intern</h3>
+              <p class="text-accent1 font-medium mb-4">DevelopersHub Corporation</p>
+              <ul class="space-y-2 text-gray-400 text-sm">
+                <li class="flex items-start gap-2"><span class="text-accent2 mt-1">&#9656;</span>Built ML models using Scikit-learn</li>
+                <li class="flex items-start gap-2"><span class="text-accent2 mt-1">&#9656;</span>Performed EDA & Feature Engineering</li>
+                <li class="flex items-start gap-2"><span class="text-accent2 mt-1">&#9656;</span>Model evaluation using Accuracy, F1, RMSE</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card p-6 rounded-2xl">
+              <div class="flex flex-wrap items-center gap-3 mb-3">
+                <span class="text-accent2 font-mono text-sm">Feb 2026 – Mar 2026</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-1">ML Intern</h3>
+              <p class="text-accent1 font-medium mb-4"><a href="https://github.com/UsaidAhmed12/Machine_Learning_internship_at_elevvo" target="_blank" rel="noopener noreferrer" class="hover:text-accent2 transition-colors">Elevvo Pathways <svg class="w-3 h-3 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a></p>
+              <ul class="space-y-2 text-gray-400 text-sm">
+                <li class="flex items-start gap-2"><span class="text-accent2 mt-1">&#9656;</span>Forest Cover Classification</li>
+                <li class="flex items-start gap-2"><span class="text-accent2 mt-1">&#9656;</span>Student Score Prediction</li>
+                <li class="flex items-start gap-2"><span class="text-accent2 mt-1">&#9656;</span>Recommendation Systems</li>
+                <li class="flex items-start gap-2"><span class="text-accent2 mt-1">&#9656;</span>Clustering & Regression Models</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="section-reveal">
+        <h2 class="section-title">Projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          <div class="project-card glass-card rounded-2xl overflow-hidden group">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">&#127929;</span>
+                <a href="https://github.com/UsaidAhmed12/KeyTroupee_App1" target="_blank" rel="noopener noreferrer" class="text-xl font-semibold text-white group-hover:text-accent2 transition-colors">Keytropee</a>
+              </div>
+              <a href="https://github.com/UsaidAhmed12/KeyTroupee_FYP" target="_blank" rel="noopener noreferrer" class="text-sm text-accent1 font-mono mb-3 block hover:text-accent2 transition-colors">Final Year Project</a>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">Educational desktop app for piano learning + typing improvement</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Tailwind</span>
+                <span class="tech-tag">Python API</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass-card rounded-2xl overflow-hidden group">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">&#127917;</span>
+                <h3 class="text-xl font-semibold text-white group-hover:text-accent2 transition-colors">Emotion-Aware AI</h3>
+              </div>
+              <p class="text-sm text-accent1 font-mono mb-3">Computer Vision</p>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">Real-time emotion detection using OpenCV + TensorFlow</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">TensorFlow</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass-card rounded-2xl overflow-hidden group">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">&#129504;</span>
+                <h3 class="text-xl font-semibold text-white group-hover:text-accent2 transition-colors">Brainwave Auth</h3>
+              </div>
+              <p class="text-sm text-accent1 font-mono mb-3">Biometrics</p>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">EEG-based secure biometric authentication system</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">EEG</span>
+                <span class="tech-tag">ML</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass-card rounded-2xl overflow-hidden group">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">&#129504;</span>
+                <h3 class="text-xl font-semibold text-white group-hover:text-accent2 transition-colors">Brain-to-Text AI</h3>
+              </div>
+              <p class="text-sm text-accent1 font-mono mb-3">Neural NLP</p>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">Neural Network + NLP model translating EEG signals into text</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tech-tag">Neural Networks</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">EEG</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass-card rounded-2xl overflow-hidden group">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">&#127795;</span>
+                <h3 class="text-xl font-semibold text-white group-hover:text-accent2 transition-colors">AI Green City Planner</h3>
+              </div>
+              <p class="text-sm text-accent1 font-mono mb-3">Sustainability</p>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">Urban sustainability prediction using GIS + ML</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">GIS</span>
+                <span class="tech-tag">ML</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass-card rounded-2xl overflow-hidden group">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">&#127869;</span>
+                <h3 class="text-xl font-semibold text-white group-hover:text-accent2 transition-colors">Taste Prediction</h3>
+              </div>
+              <p class="text-sm text-accent1 font-mono mb-3">KNN Classifier</p>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">GUI-based ML system using Tkinter for taste prediction</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">KNN</span>
+                <span class="tech-tag">Tkinter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-24 bg-secondary/50 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="section-reveal">
+        <h2 class="section-title">Skills</h2>
+        <div class="grid md:grid-cols-2 gap-12 mt-12">
+          <div class="glass-card p-8 rounded-2xl">
+            <h3 class="text-lg font-semibold text-white mb-6 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-accent1"></span>Programming
+            </h3>
+            <div class="space-y-5">
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-gray-300 text-sm">Python</span><span class="text-accent2 text-sm font-mono">95%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-gray-300 text-sm">C++</span><span class="text-accent2 text-sm font-mono">85%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-gray-300 text-sm">Java</span><span class="text-accent2 text-sm font-mono">80%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-gray-300 text-sm">JavaScript</span><span class="text-accent2 text-sm font-mono">75%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="glass-card p-8 rounded-2xl">
+            <h3 class="text-lg font-semibold text-white mb-6 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-accent2"></span>AI / ML
+            </h3>
+            <div class="space-y-5">
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-gray-300 text-sm">Machine Learning</span><span class="text-accent2 text-sm font-mono">90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-gray-300 text-sm">Data Science</span><span class="text-accent2 text-sm font-mono">85%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-gray-300 text-sm">Deep Learning</span><span class="text-accent2 text-sm font-mono">80%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-gray-300 text-sm">Statistics</span><span class="text-accent2 text-sm font-mono">80%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="section-reveal">
+        <h2 class="section-title">Certifications</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+
+          <!-- Cert Card 1 -->
+          <div class="cert-card glass-card rounded-2xl overflow-hidden group">
+            <div class="cert-image-wrapper">
+              <div class="cert-magnify" title="View fullscreen">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+              </div>
+              <img src="" alt="R Programming Certificate" class="cert-img" style="display:none;" />
+              <div class="cert-placeholder">
+                <svg class="w-12 h-12 text-accent1 opacity-40" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                <p class="text-xs text-gray-500 mt-2">Click to add certificate</p>
+              </div>
+              <input type="file" accept="image/*" class="cert-file-input" style="display:none;" />
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-semibold text-white group-hover:text-accent2 transition-colors">R Programming</h3>
+              <div class="flex justify-between items-center mt-2">
+                <span class="text-sm text-gray-400">Itronix Solutions</span>
+                <span class="text-sm text-accent2 font-mono">2021</span>
+              </div>
+              <a href="#" class="inline-flex items-center gap-1 text-accent2 text-sm mt-3 hover:underline">Verify Certificate <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+            </div>
+          </div>
+
+          <!-- Cert Card 2 -->
+          <div class="cert-card glass-card rounded-2xl overflow-hidden group">
+            <div class="cert-image-wrapper">
+              <div class="cert-magnify" title="View fullscreen">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+              </div>
+              <img src="" alt="AWS S3 Basics Certificate" class="cert-img" style="display:none;" />
+              <div class="cert-placeholder">
+                <svg class="w-12 h-12 text-accent1 opacity-40" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                <p class="text-xs text-gray-500 mt-2">Click to add certificate</p>
+              </div>
+              <input type="file" accept="image/*" class="cert-file-input" style="display:none;" />
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-semibold text-white group-hover:text-accent2 transition-colors">AWS S3 Basics</h3>
+              <div class="flex justify-between items-center mt-2">
+                <span class="text-sm text-gray-400">Coursera</span>
+                <span class="text-sm text-accent2 font-mono">2021</span>
+              </div>
+              <a href="https://coursera.org/verify/W67KY2RCUDDJ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent2 text-sm mt-3 hover:underline">Verify Certificate <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+            </div>
+          </div>
+
+          <!-- Cert Card 3 -->
+          <div class="cert-card glass-card rounded-2xl overflow-hidden group">
+            <div class="cert-image-wrapper">
+              <div class="cert-magnify" title="View fullscreen">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+              </div>
+              <img src="" alt="Semantic Segmentation Certificate" class="cert-img" style="display:none;" />
+              <div class="cert-placeholder">
+                <svg class="w-12 h-12 text-accent1 opacity-40" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                <p class="text-xs text-gray-500 mt-2">Click to add certificate</p>
+              </div>
+              <input type="file" accept="image/*" class="cert-file-input" style="display:none;" />
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-semibold text-white group-hover:text-accent2 transition-colors">Semantic Segmentation</h3>
+              <div class="flex justify-between items-center mt-2">
+                <span class="text-sm text-gray-400">Coursera</span>
+                <span class="text-sm text-accent2 font-mono">2021</span>
+              </div>
+              <a href="https://coursera.org/verify/RSND26L4RYHN" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent2 text-sm mt-3 hover:underline">Verify Certificate <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+            </div>
+          </div>
+
+          <!-- Cert Card 4 -->
+          <div class="cert-card glass-card rounded-2xl overflow-hidden group">
+            <div class="cert-image-wrapper">
+              <div class="cert-magnify" title="View fullscreen">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+              </div>
+              <img src="" alt="Data Cleaning with Pandas Certificate" class="cert-img" style="display:none;" />
+              <div class="cert-placeholder">
+                <svg class="w-12 h-12 text-accent1 opacity-40" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                <p class="text-xs text-gray-500 mt-2">Click to add certificate</p>
+              </div>
+              <input type="file" accept="image/*" class="cert-file-input" style="display:none;" />
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-semibold text-white group-hover:text-accent2 transition-colors">Data Cleaning with Pandas</h3>
+              <div class="flex justify-between items-center mt-2">
+                <span class="text-sm text-gray-400">Itronix Solutions</span>
+                <span class="text-sm text-accent2 font-mono">2021</span>
+              </div>
+              <a href="#" class="inline-flex items-center gap-1 text-accent2 text-sm mt-3 hover:underline">Verify Certificate <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+            </div>
+          </div>
+
+          <!-- Cert Card 5 -->
+          <div class="cert-card glass-card rounded-2xl overflow-hidden group">
+            <div class="cert-image-wrapper">
+              <div class="cert-magnify" title="View fullscreen">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+              </div>
+              <img src="" alt="Cyber Security Certificate" class="cert-img" style="display:none;" />
+              <div class="cert-placeholder">
+                <svg class="w-12 h-12 text-accent1 opacity-40" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                <p class="text-xs text-gray-500 mt-2">Click to add certificate</p>
+              </div>
+              <input type="file" accept="image/*" class="cert-file-input" style="display:none;" />
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-semibold text-white group-hover:text-accent2 transition-colors">Cyber Security</h3>
+              <div class="flex justify-between items-center mt-2">
+                <span class="text-sm text-gray-400">Itronix Solutions</span>
+                <span class="text-sm text-accent2 font-mono">2021</span>
+              </div>
+              <a href="#" class="inline-flex items-center gap-1 text-accent2 text-sm mt-3 hover:underline">Verify Certificate <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+            </div>
+          </div>
+
+          <!-- Cert Card 6 -->
+          <div class="cert-card glass-card rounded-2xl overflow-hidden group">
+            <div class="cert-image-wrapper">
+              <div class="cert-magnify" title="View fullscreen">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+              </div>
+              <img src="" alt="DigiSkills Freelancing Certificate" class="cert-img" style="display:none;" />
+              <div class="cert-placeholder">
+                <svg class="w-12 h-12 text-accent1 opacity-40" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                <p class="text-xs text-gray-500 mt-2">Click to add certificate</p>
+              </div>
+              <input type="file" accept="image/*" class="cert-file-input" style="display:none;" />
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-semibold text-white group-hover:text-accent2 transition-colors">DigiSkills Freelancing</h3>
+              <div class="flex justify-between items-center mt-2">
+                <span class="text-sm text-gray-400">DigiSkills</span>
+                <span class="text-sm text-accent2 font-mono">2021</span>
+              </div>
+              <a href="#" class="inline-flex items-center gap-1 text-accent2 text-sm mt-3 hover:underline">Verify Certificate <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 bg-secondary/50 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="section-reveal">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="max-w-2xl mx-auto mt-12">
+          <form id="contact-form" class="glass-card p-8 rounded-2xl space-y-6">
+            <input type="text" name="_honey" style="display:none" />
+            <div>
+              <label for="name" class="block text-sm text-gray-400 mb-2">Name</label>
+              <input type="text" id="name" name="from_name" required
+                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-gray-200 focus:outline-none focus:border-accent1 transition-colors placeholder-gray-600"
+                placeholder="Your name" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm text-gray-400 mb-2">Email</label>
+              <input type="email" id="email" name="from_email" required
+                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-gray-200 focus:outline-none focus:border-accent1 transition-colors placeholder-gray-600"
+                placeholder="your@email.com" />
+            </div>
+            <div>
+              <label for="message" class="block text-sm text-gray-400 mb-2">Message</label>
+              <textarea id="message" name="message" rows="5" required
+                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-gray-200 focus:outline-none focus:border-accent1 transition-colors placeholder-gray-600 resize-none"
+                placeholder="Your message..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full text-center">Send Message</button>
+          </form>
+          <div class="flex justify-center gap-6 mt-8">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&to=usaidahmed1008@gmail.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Email">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-gray-500 text-sm">
+        &copy; 2026 Usaid Ahmed. Built with passion for AI.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

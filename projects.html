@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Usaid Ahmed</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0F172A',
+            secondary: '#111827',
+            accent1: '#6366F1',
+            accent2: '#22D3EE',
+            accent3: '#A78BFA',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-primary text-gray-200 font-sans overflow-x-hidden">
+
+  <canvas id="particles-canvas"></canvas>
+  <div class="gradient-bg">
+    <div class="gradient-blob blob-1"></div>
+    <div class="gradient-blob blob-2"></div>
+    <div class="gradient-blob blob-3"></div>
+    <div class="gradient-blob blob-4"></div>
+    <div class="gradient-blob blob-5"></div>
+  </div>
+
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 scrolled">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-bold gradient-text">UA</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="certifications.html" class="nav-link">Certifications</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden text-gray-200 focus:outline-none" aria-label="Toggle menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden glass-card mx-4 mb-2 rounded-xl overflow-hidden">
+      <div class="flex flex-col p-4 gap-3">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="experience.html" class="mobile-nav-link">Experience</a>
+        <a href="projects.html" class="mobile-nav-link">Projects</a>
+        <a href="skills.html" class="mobile-nav-link">Skills</a>
+        <a href="certifications.html" class="mobile-nav-link">Certifications</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mini Hero -->
+  <section class="hero-mini relative">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8 pt-16">
+      <div class="hero-image-wrapper">
+        <div class="hero-glow"></div>
+        <div class="hero-avatar" id="avatar-wrapper" style="cursor:pointer;" title="Click to add your photo">
+          <input type="file" id="avatar-input" accept="image/*" style="display:none" />
+          <div class="avatar-placeholder" id="avatar-placeholder">
+            <svg class="w-12 h-12 text-accent1 opacity-60" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+            <p class="text-xs text-gray-400 mt-1">Click to add photo</p>
+          </div>
+          <img id="avatar-img" src="" alt="Usaid Ahmed" class="avatar-photo" style="display:none;" />
+        </div>
+        <div class="orbit-ring"></div>
+        <div class="orbit-dot orbit-dot-1"></div>
+        <div class="orbit-dot orbit-dot-2"></div>
+        <div class="orbit-dot orbit-dot-3"></div>
+      </div>
+      <div>
+        <h1 class="text-3xl md:text-4xl font-bold gradient-text">Usaid Ahmed</h1>
+        <p class="text-lg text-gray-400 mt-1"><span id="typewriter"></span><span class="typewriter-cursor">|</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="section-reveal">
+        <h2 class="section-title">Projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          <div class="project-card glass-card rounded-2xl overflow-hidden group">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">&#127929;</span>
+                <a href="https://github.com/UsaidAhmed12/KeyTroupee_App1" target="_blank" rel="noopener noreferrer" class="text-xl font-semibold text-white group-hover:text-accent2 transition-colors">Keytropee</a>
+              </div>
+              <a href="https://github.com/UsaidAhmed12/KeyTroupee_FYP" target="_blank" rel="noopener noreferrer" class="text-sm text-accent1 font-mono mb-3 block hover:text-accent2 transition-colors">Final Year Project</a>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">Educational desktop app for piano learning + typing improvement</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Tailwind</span>
+                <span class="tech-tag">Python API</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass-card rounded-2xl overflow-hidden group">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">&#127917;</span>
+                <h3 class="text-xl font-semibold text-white group-hover:text-accent2 transition-colors">Emotion-Aware AI</h3>
+              </div>
+              <p class="text-sm text-accent1 font-mono mb-3">Computer Vision</p>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">Real-time emotion detection using OpenCV + TensorFlow</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">TensorFlow</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass-card rounded-2xl overflow-hidden group">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">&#129504;</span>
+                <h3 class="text-xl font-semibold text-white group-hover:text-accent2 transition-colors">Brainwave Auth</h3>
+              </div>
+              <p class="text-sm text-accent1 font-mono mb-3">Biometrics</p>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">EEG-based secure biometric authentication system</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">EEG</span>
+                <span class="tech-tag">ML</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass-card rounded-2xl overflow-hidden group">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">&#129504;</span>
+                <h3 class="text-xl font-semibold text-white group-hover:text-accent2 transition-colors">Brain-to-Text AI</h3>
+              </div>
+              <p class="text-sm text-accent1 font-mono mb-3">Neural NLP</p>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">Neural Network + NLP model translating EEG signals into text</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tech-tag">Neural Networks</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">EEG</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass-card rounded-2xl overflow-hidden group">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">&#127795;</span>
+                <h3 class="text-xl font-semibold text-white group-hover:text-accent2 transition-colors">AI Green City Planner</h3>
+              </div>
+              <p class="text-sm text-accent1 font-mono mb-3">Sustainability</p>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">Urban sustainability prediction using GIS + ML</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">GIS</span>
+                <span class="tech-tag">ML</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card glass-card rounded-2xl overflow-hidden group">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">&#127869;</span>
+                <h3 class="text-xl font-semibold text-white group-hover:text-accent2 transition-colors">Taste Prediction</h3>
+              </div>
+              <p class="text-sm text-accent1 font-mono mb-3">KNN Classifier</p>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">GUI-based ML system using Tkinter for taste prediction</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">KNN</span>
+                <span class="tech-tag">Tkinter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-gray-500 text-sm">&copy; 2026 Usaid Ahmed. Built with passion for AI.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
